@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* BACKGROUND */
+.background {
+  position: absolute;
+  inset: 0;
+  background: url("https://i.imgur.com/Ct6I2B4.jpeg") center/cover no-repeat;
+  filter: brightness(0.45);
+}
+
+/* HOME TEXT */
+.home-text {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+}
+
+.author {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.lines {
+  margin-top: 25px;
+}
+
+.lines span {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 16px;
+}
+
+/* GOLD LIGHT */
+#goldLight {
+  position: absolute;
+  right: 15%;
+  bottom: 28%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, gold 25%, transparent 70%);
+  cursor: pointer;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px gold; }
+  50% { box-shadow: 0 0 50px gold; }
+  100% { box-shadow: 0 0 20px gold; }
+}
+
+/* INFO */
+.info-box {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  font-size: 13px;
+}
+
+.info-box a {
+  color: gold;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* COLLECTION */
+.collection-container {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 140px;
+}
+
+.collection-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 52px;
+}
+
+.collection-title span {
+  display: block;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.collections-text {
+  margin-top: 10px;
+  font-size: 22px;
+  color: gold;
+  letter-spacing: 2px;
+}
+
+/* BOOKS */
+.books {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+.book {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.book:hover {
+  transform: scale(1.08);
+}
+
+.book img {
+  width: 220px;
+  border: 2px solid gold;
+}
+
+/* BOUTON RETURN collection */
+.collection-back {
+  text-align: center;
+  margin-top: 60px; 
+}
+
+.collection-back button {
+  background: none;
+  border: 1px solid gold;
+  color: gold;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* BOOK PAGE */
+.book-box {
+  max-width: 700px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+#amazonBtn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 36px;
+  border: 2px solid gold;
+  color: gold;
+  text-decoration: none;
+}
+
+#comingSoon {
+  margin-top: 20px;
+  color: gold;
+  font-size: 18px;
+}
+
+.back-fixed {
+  background: none;
+  border: 1px solid gold;
+  color: gold;
+  padding: 10px 34px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* ======================== */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .books {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .book img {
+    width: 180px;
+  }
+
+  .home-text h1 {
+    font-size: 48px;
+  }
+
+  .lines span {
+    font-size: 14px;
+  }
+
+  #goldLight {
+    right: 10%;
+    bottom: 20%;
+    width: 70px;
+    height: 70px;
+  }
+}

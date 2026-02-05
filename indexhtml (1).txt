@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The True Heir</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="background"></div>
+
+  <div class="home-text">
+    <h1>THE TRUE HEIR</h1>
+    <p class="author">DAMIO MBUYU</p>
+
+    <div class="lines">
+      <span>SECRET DISCOVERED</span>
+      <span>A TALE OF ADVENTURE, SECRET AND DESTINY</span>
+    </div>
+  </div>
+
+  <!-- GOLD LIGHT -->
+  <div id="goldLight"></div>
+
+  <!-- INFO -->
+  <div class="info-box">
+    <div>
+      <strong>Contact</strong><br>
+      younne822@gmail.com
+    </div>
+    <div>
+      <strong>Follow me</strong><br>
+      <a href="https://www.instagram.com/thetrueheir_official/" target="_blank">Instagram</a>
+    </div>
+    <div>
+      <strong>Author</strong><br>
+      <a href="https://author.amazon.com/home" target="_blank">Amazon</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2026 DAMIO MBUYU. All rights reserved.
+  </footer>
+</section>
+
+<!-- COLLECTION -->
+<section id="collection" class="page">
+  <div class="collection-container">
+    <h2 class="collection-title">
+      THE TRUE HEIR
+      <span>RISE OF THE RIGHTFUL KING</span>
+      <span class="collections-text">COLLECTIONS</span>
+    </h2>
+
+    <div class="books">
+      <div class="book" onclick="openBook(1)">
+        <img src="https://i.imgur.com/DqsFBQV.jpeg">
+        <p>Tome 1</p>
+      </div>
+
+      <div class="book" onclick="openBook(2)">
+        <img src="https://i.imgur.com/7cOXoxy.jpeg">
+        <p>Tome 2</p>
+      </div>
+
+      <div class="book" onclick="openBook(3)">
+        <img src="https://i.imgur.com/ud1FYlH.jpeg">
+        <p>Tome 3</p>
+      </div>
+    </div>
+
+    <!-- BOUTON RETURN -->
+    <div class="collection-back">
+      <button onclick="goHome()">Return</button>
+    </div>
+
+    <footer class="footer">
+      © 2026 DAMIO MBUYU. All rights reserved.
+    </footer>
+  </div>
+</section>
+
+<!-- BOOK PAGE -->
+<section id="bookPage" class="page">
+  <div class="book-box">
+    <h2 id="bookTitle"></h2>
+    <p id="bookText"></p>
+
+    <a id="amazonBtn" target="_blank">Read on Amazon</a>
+    <p id="comingSoon"></p>
+
+    <!-- BOUTON RETURN -->
+    <div class="book-footer">
+      <button class="back-fixed" onclick="goCollection()">Return</button>
+      <footer class="footer">
+        © 2026 DAMIO MBUYU. All rights reserved.
+      </footer>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+const home = document.getElementById("home");
+const collection = document.getElementById("collection");
+const bookPage = document.getElementById("bookPage");
+const goldLight = document.getElementById("goldLight");
+
+function show(page) {
+  [home, collection, bookPage].forEach(p => p.classList.remove("active"));
+  page.classList.add("active");
+}
+
+goldLight.onclick = () => {
+  show(collection);
+};
+
+function goHome() {
+  show(home);
+}
+
+function goCollection() {
+  show(collection);
+}
+
+function openBook(n) {
+  show(bookPage);
+
+  const title = document.getElementById("bookTitle");
+  const text = document.getElementById("bookText");
+  const btn = document.getElementById("amazonBtn");
+  const soon = document.getElementById("comingSoon");
+
+  btn.style.display = "inline-block";
+  soon.textContent = "";
+
+  if (n === 1) {
+    title.textContent = "Tome 1";
+    text.textContent =
+      "In a distant world, two rival kingdoms are divided by war. Abandoned at birth and raised by the enemy king, young Leo discovers his true origins and must choose between his bloodline and the family who raised him—while destiny calls him to unite the kingdoms.";
+    btn.href = "https://www.amazon.com/True-Heir-Rise-Rightful-King-ebook/dp/B0F74R5RTX";
+  }
+
+  if (n === 2) {
+    title.textContent = "Tome 2";
+    text.textContent =
+      "Eighteen years after crossing into the unknown, Leo forges his own strength through trials and loyalty. Refusing to rely on other kingdoms, he builds Nythoria with his allies—a symbol of resilience and ambition. As he prepares to challenge powerful rivals, a figure from his past resurfaces, pushing Leo closer to his true destiny as the rightful heir.";
+    btn.href = "https://www.amazon.com/True-Heir-Rise-Rightful-King-ebook/dp/B0FC34HYHB";
+  }
+
+  if (n === 3) {
+    title.textContent = "Tome 3";
+    text.textContent =
+      "After defeating King Tyran, Leo embraces his destiny as ruler—only to see his kingdom fall into chaos. With the sacred artifacts lost and a new threat rising, his last hope lies in an ancient relic, Eloen. To save his family and realm, Leo must undertake a perilous quest that will test his soul and demand the ultimate sacrifice.";
+    btn.style.display = "none";
+    soon.textContent = "COMING SOON";
+  }
+}
