@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>The True Heir</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- CART -->
+<!-- CART ICON -->
 <div id="cartIcon" onclick="goCart()" style="display:none;">
 <i class="fa-solid fa-cart-shopping"></i>
 <span id="cartCount">0</span>
@@ -35,7 +37,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div id="goldLight"></div>
 
-<footer>© All Rights Reserved</footer>
+<footer class="footer">
+<p>© All Rights Reserved</p>
+
+<div class="footer-links">
+<a href="#" onclick="openInfo('about')">About</a>
+<a href="#" onclick="openInfo('contact')">Contact</a>
+<a href="#" onclick="openInfo('privacy')">Privacy Policy</a>
+<a href="#" onclick="openInfo('terms')">Terms</a>
+</div>
+
+</footer>
 
 </section>
 
@@ -43,40 +55,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <section id="collection" class="page">
 
 <h1 class="collection-title">THE TRUE HEIR</h1>
-<h3 class="collection-sub">RISE OF THE RIGHTFUL KING</h3>
-<p class="collection-label">COLLECTION</p>
+<h3>COLLECTION</h3>
 
 <div class="books">
 
-<!-- TOME 1 -->
 <div class="book">
 <img src="https://i.imgur.com/DqsFBQV.jpeg">
 <h4>Tome 1</h4>
-<p class="price">$7.50</p>
+<p>$7.50</p>
 <button onclick="openBook(1)">View</button>
 </div>
 
-<!-- TOME 2 -->
 <div class="book">
 <img src="https://i.imgur.com/7cOXoxy.jpeg">
 <h4>Tome 2</h4>
-<p class="price">Coming Soon</p>
+<p>COMING SOON</p>
 <button onclick="openBook(2)">View</button>
 </div>
 
-<!-- TOME 3 -->
 <div class="book">
 <img src="https://i.imgur.com/ud1FYlH.jpeg">
 <h4>Tome 3</h4>
-<p class="price">Coming Soon</p>
+<p>COMING SOON</p>
 <button onclick="openBook(3)">View</button>
 </div>
 
 </div>
 
-<button class="return" onclick="goHome()">Return</button>
+<button onclick="goHome()">Return</button>
 
-<footer>© All Rights Reserved</footer>
+<footer class="footer">
+<p>© All Rights Reserved</p>
+
+<div class="footer-links">
+<a href="#" onclick="openInfo('about')">About</a>
+<a href="#" onclick="openInfo('contact')">Contact</a>
+<a href="#" onclick="openInfo('privacy')">Privacy Policy</a>
+<a href="#" onclick="openInfo('terms')">Terms</a>
+</div>
+
+</footer>
 
 </section>
 
@@ -87,10 +105,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <img id="bookImage">
 
-<div class="book-info">
+<div>
 
 <h2 id="bookTitle"></h2>
-<p class="price" id="bookPrice"></p>
+<p id="bookPrice"></p>
 <p id="bookText"></p>
 
 <div id="formatSelect"></div>
@@ -98,28 +116,64 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <button id="addBookBtn" onclick="addBookFromPage()">Add to Cart</button>
 
 </div>
+
 </div>
 
-<button class="return" onclick="goCollection()">Return</button>
+<button onclick="goCollection()">Return</button>
 
-<footer>© All Rights Reserved</footer>
+<footer class="footer">
+<p>© All Rights Reserved</p>
+
+<div class="footer-links">
+<a href="#" onclick="openInfo('about')">About</a>
+<a href="#" onclick="openInfo('contact')">Contact</a>
+<a href="#" onclick="openInfo('privacy')">Privacy Policy</a>
+<a href="#" onclick="openInfo('terms')">Terms</a>
+</div>
+
+</footer>
 
 </section>
 
-<!-- CART PAGE -->
+<!-- CART -->
 <section id="cartPage" class="page">
 
 <h1>My Cart</h1>
 
 <div id="cartItemsPage"></div>
 
-<p id="cartTotalPage"></p>
+<p id="cartTotalPage">Total: $0.00</p>
 
-<div id="payhipBox"></div>
+<div id="payhipContainer"></div>
 
-<button class="return" onclick="goCollection()">Return</button>
+<button onclick="goCollection()">Return</button>
 
-<footer>© All Rights Reserved</footer>
+<footer class="footer">
+<p>© All Rights Reserved</p>
+
+<div class="footer-links">
+<a href="#" onclick="openInfo('about')">About</a>
+<a href="#" onclick="openInfo('contact')">Contact</a>
+<a href="#" onclick="openInfo('privacy')">Privacy Policy</a>
+<a href="#" onclick="openInfo('terms')">Terms</a>
+</div>
+
+</footer>
+
+</section>
+
+<!-- INFO PAGE -->
+<section id="infoPage" class="page">
+
+<h1 id="infoTitle"></h1>
+
+<p id="infoText" class="info-text"></p>
+
+<button onclick="goHome()">Return</button>
+
+<footer class="footer">
+<p>© All Rights Reserved</p>
+</footer>
 
 </section>
 
