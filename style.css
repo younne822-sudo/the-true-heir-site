@@ -1,39 +1,35 @@
 body{
 margin:0;
-font-family:'Cinzel',serif;
 background:black;
 color:white;
+font-family:'Cinzel',serif;
 text-align:center;
 }
-
-/* pages */
 
 .page{
 display:none;
 min-height:100vh;
-position:relative;
-padding-bottom:60px;
 }
 
 .active{
 display:block;
+animation:fade 1s;
 }
 
-/* background home */
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+/* background */
 
 .home-bg{
-position:absolute;
+position:fixed;
 width:100%;
 height:100%;
-background:url("https://i.imgur.com/Ct6I2B4.jpeg") center/cover;
+background:url('https://i.imgur.com/Ct6I2B4.jpeg') center/cover;
 filter:brightness(0.35);
 z-index:-1;
-}
-
-/* texts */
-
-.home-text{
-margin-top:120px;
 }
 
 /* gold light */
@@ -41,87 +37,69 @@ margin-top:120px;
 #goldLight{
 width:120px;
 height:120px;
-background:radial-gradient(gold,transparent);
+background:radial-gradient(circle,gold,transparent);
 border-radius:50%;
-margin:220px auto;
+margin:80px auto;
 cursor:pointer;
-animation:glow 2s infinite;
+animation:pulse 2s infinite;
 }
 
-@keyframes glow{
-0%{box-shadow:0 0 20px gold;}
-50%{box-shadow:0 0 50px gold;}
-100%{box-shadow:0 0 20px gold;}
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
 }
 
 /* books */
 
 .books{
-display:flex;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
+padding:40px;
 }
 
 .book{
 background:#111;
-padding:15px;
+padding:20px;
 border-radius:12px;
-transition:0.4s;
-}
-
-.book:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px gold;
+box-shadow:0 0 25px rgba(255,215,0,0.35);
 }
 
 .book img{
-width:180px;
+width:200px;
 border-radius:10px;
-transition:0.4s;
 }
 
-.book:hover img{
-transform:scale(1.05);
-}
-
-.price{
-color:gold;
-}
-
-/* book page */
+/* detail */
 
 .book-detail{
 display:flex;
-justify-content:center;
-align-items:center;
-gap:40px;
-margin-top:80px;
 flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+padding:40px;
 }
 
 .book-detail img{
-width:260px;
+width:250px;
 border-radius:12px;
 }
 
 /* buttons */
 
 button{
-background:linear-gradient(45deg,#b8860b,#ffd700);
+background:gold;
 border:none;
-padding:10px 18px;
-border-radius:8px;
+padding:12px 20px;
+margin:8px;
 cursor:pointer;
+border-radius:8px;
 font-weight:bold;
-transition:0.3s;
-margin-top:10px;
 }
 
 button:hover{
-transform:scale(1.08);
-box-shadow:0 0 15px gold;
+background:white;
 }
 
 /* cart */
@@ -129,50 +107,73 @@ box-shadow:0 0 15px gold;
 #cartIcon{
 position:fixed;
 top:20px;
-right:20px;
+right:25px;
+width:55px;
+height:55px;
+background:#111;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 font-size:22px;
 cursor:pointer;
-background:black;
-padding:10px;
-border-radius:10px;
-border:1px solid gold;
-z-index:1000;
+box-shadow:0 0 18px gold;
+z-index:999;
 }
 
 #cartCount{
-color:gold;
-margin-left:6px;
+position:absolute;
+top:-5px;
+right:-5px;
+background:red;
+padding:3px 7px;
+border-radius:50%;
+font-size:12px;
 }
 
 /* footer */
 
-footer{
-position:absolute;
-bottom:0;
-width:100%;
-padding:10px;
-opacity:0.7;
+.footer{
+margin-top:80px;
+opacity:0.8;
 }
 
-/* payhip button */
+.footer-links{
+margin-top:8px;
+display:flex;
+gap:20px;
+justify-content:center;
+font-size:14px;
+}
 
-.payhip-btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 24px;
-background:gold;
-color:black;
+.footer-links a{
+color:white;
 text-decoration:none;
-border-radius:10px;
-font-weight:bold;
 }
 
-/* mobile */
+.footer-links a:hover{
+color:gold;
+}
+
+/* info page */
+
+.info-text{
+max-width:800px;
+margin:auto;
+padding:30px;
+line-height:1.7;
+}
+
+/* responsive */
 
 @media(max-width:768px){
 
 .book-detail{
 flex-direction:column;
+}
+
+.book img{
+width:160px;
 }
 
 }
