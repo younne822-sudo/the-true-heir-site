@@ -3,105 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <title>The True Heir</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
+
+<!-- CART -->
+<div id="cartIcon" onclick="goCart()" style="display:none;">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cartCount">0</span>
+</div>
 
 <!-- HOME -->
 <section id="home" class="page active">
-  <div class="background"></div>
 
-  <div class="home-text">
-    <h1>THE TRUE HEIR</h1>
-    <p class="author">DAMIO MBUYU</p>
+<div class="home-bg"></div>
 
-    <div class="lines">
-      <span>SECRET DISCOVERED</span>
-      <span>A TALE OF ADVENTURE, SECRET AND DESTINY</span>
-    </div>
-  </div>
+<div class="home-text">
+<h1>THE TRUE HEIR</h1>
+<h3>DAMIO MBUYU</h3>
+<p>SECRET DISCOVERED</p>
+<p>A TALE OF ADVENTURE, SECRET AND DESTINY</p>
+</div>
 
-  <!-- GOLD LIGHT -->
-  <div id="goldLight"></div>
+<div id="goldLight"></div>
 
-  <!-- INFO -->
-  <div class="info-box">
-    <div>
-      <strong>Contact</strong><br>
-      younne822@gmail.com
-    </div>
-    <div>
-      <strong>Follow me</strong><br>
-      <a href="https://www.instagram.com/thetrueheir_official/" target="_blank">Instagram</a>
-    </div>
-    <div>
-      <strong>Author</strong><br>
-      <a href="https://author.amazon.com/home" target="_blank">Amazon</a>
-    </div>
-  </div>
+<footer>© All Rights Reserved</footer>
 
-  <footer class="footer">
-    © 2026 DAMIO MBUYU. All rights reserved.
-  </footer>
 </section>
 
 <!-- COLLECTION -->
 <section id="collection" class="page">
-  <div class="collection-container">
-    <h2 class="collection-title">
-      THE TRUE HEIR
-      <span>RISE OF THE RIGHTFUL KING</span>
-      <span class="collections-text">COLLECTIONS</span>
-    </h2>
 
-    <div class="books">
-      <div class="book" onclick="openBook(1)">
-        <img src="https://i.imgur.com/DqsFBQV.jpeg">
-        <p>Tome 1</p>
-      </div>
+<h1 class="collection-title">THE TRUE HEIR</h1>
+<h3 class="collection-sub">RISE OF THE RIGHTFUL KING</h3>
+<p class="collection-label">COLLECTION</p>
 
-      <div class="book" onclick="openBook(2)">
-        <img src="https://i.imgur.com/7cOXoxy.jpeg">
-        <p>Tome 2</p>
-      </div>
+<div class="books">
 
-      <div class="book" onclick="openBook(3)">
-        <img src="https://i.imgur.com/ud1FYlH.jpeg">
-        <p>Tome 3</p>
-      </div>
-    </div>
+<!-- TOME 1 -->
+<div class="book">
+<img src="https://i.imgur.com/DqsFBQV.jpeg">
+<h4>Tome 1</h4>
+<p class="price">$7.50</p>
+<button onclick="openBook(1)">View</button>
+</div>
 
-    <!-- BOUTON RETURN -->
-    <div class="collection-back">
-      <button onclick="goHome()">Return</button>
-    </div>
+<!-- TOME 2 -->
+<div class="book">
+<img src="https://i.imgur.com/7cOXoxy.jpeg">
+<h4>Tome 2</h4>
+<p class="price">Coming Soon</p>
+<button onclick="openBook(2)">View</button>
+</div>
 
-    <footer class="footer">
-      © 2026 DAMIO MBUYU. All rights reserved.
-    </footer>
-  </div>
+<!-- TOME 3 -->
+<div class="book">
+<img src="https://i.imgur.com/ud1FYlH.jpeg">
+<h4>Tome 3</h4>
+<p class="price">Coming Soon</p>
+<button onclick="openBook(3)">View</button>
+</div>
+
+</div>
+
+<button class="return" onclick="goHome()">Return</button>
+
+<footer>© All Rights Reserved</footer>
+
 </section>
 
 <!-- BOOK PAGE -->
 <section id="bookPage" class="page">
-  <div class="book-box">
-    <h2 id="bookTitle"></h2>
-    <p id="bookText"></p>
 
-    <a id="amazonBtn" target="_blank">Read on Amazon</a>
-    <p id="comingSoon"></p>
+<div class="book-detail">
 
-    <!-- BOUTON RETURN -->
-    <div class="book-footer">
-      <button class="back-fixed" onclick="goCollection()">Return</button>
-      <footer class="footer">
-        © 2026 DAMIO MBUYU. All rights reserved.
-      </footer>
-    </div>
-  </div>
+<img id="bookImage">
+
+<div class="book-info">
+
+<h2 id="bookTitle"></h2>
+<p class="price" id="bookPrice"></p>
+<p id="bookText"></p>
+
+<div id="formatSelect"></div>
+
+<button id="addBookBtn" onclick="addBookFromPage()">Add to Cart</button>
+
+</div>
+</div>
+
+<button class="return" onclick="goCollection()">Return</button>
+
+<footer>© All Rights Reserved</footer>
+
+</section>
+
+<!-- CART PAGE -->
+<section id="cartPage" class="page">
+
+<h1>My Cart</h1>
+
+<div id="cartItemsPage"></div>
+
+<p id="cartTotalPage"></p>
+
+<div id="payhipBox"></div>
+
+<button class="return" onclick="goCollection()">Return</button>
+
+<footer>© All Rights Reserved</footer>
+
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
